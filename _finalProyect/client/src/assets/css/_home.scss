@@ -1,0 +1,11 @@
+#film-list-container {
+  width: 100%;
+  margin-left: 18%;
+
+  & .film-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+}

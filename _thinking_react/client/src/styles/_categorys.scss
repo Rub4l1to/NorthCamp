@@ -1,0 +1,6 @@
+.category-container {
+  font-weight: bold;
+  padding: 10px 0 5px;
+  text-transform: to-upper-case($string: uppercase);
+  border-bottom: 2px solid black;
+}

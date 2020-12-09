@@ -1,0 +1,15 @@
+.item-container{
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    // align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    padding: 5px 0;
+
+
+}
+
+.item-out-of-stock{
+    color:red
+}
