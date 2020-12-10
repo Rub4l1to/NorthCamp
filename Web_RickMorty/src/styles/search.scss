@@ -1,0 +1,34 @@
+.search {
+  width: 100%;
+  @include flexbox;
+  &__box {
+    width: $grid;
+    // background-color: red;
+    @include flexbox;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  &__seeker {
+    width: 55%;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: $secundary-font;
+    border: none;
+    background-color: $info-card-color;
+    color: $main-color-letter;
+    font-size: 18px;
+    transition: all 300ms;
+    position: relative;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $main-color-letter;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}

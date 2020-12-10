@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  background-image: url(../assets/blackjack-background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* ANIMACIONES */
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fast {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+/* Modal */
+.modal {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(48, 47, 47, 0.692);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.modal .modal-window {
+  width: 30%;
+  background-color: rgba(49, 48, 48, 0.685);
+  border-radius: 5px;
+  padding: 25px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal .modal-window .modal-title {
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal .modal-window .modal-title img {
+  width: 80%;
+
+  padding: 20px 0 0 0;
+}
+.modal .modal-button-container button {
+  padding: 15px 60px;
+  border: none;
+  background-color: white;
+  color: rgba(66, 65, 65, 0.692);
+  text-transform: uppercase;
+  transition: ease 500ms;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal .modal-button-container button:hover {
+  background-color: rgb(66, 65, 65);
+  color: white;
+}
+.modal .modal-final {
+  display: none;
+}
+/* Chat */
+main .chat {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 30%;
+  height: 400px;
+  background-color: rgba(66, 65, 65, 0.692);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .chat .chat-title {
+  width: 100%;
+  color: white;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+  align-items: center;
+}
+main .chat .chat-title p {
+  width: 90%;
+  border-bottom: 2px solid white;
+  padding: 20px 0 10px 0;
+}
+main .chat #messages {
+  width: 90%;
+  margin: 10px 0;
+  height: 45vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+main .chat #messages::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+main .chat #messages::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
+
+main .chat #messages::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+main .chat #messages .message {
+  width: 100%;
+  padding: 2px;
+  color: white;
+  font-weight: bold;
+}
+
+main .chat #messages .message .date-message {
+  font-size: 12px;
+  color: rgb(202, 201, 201);
+}
+
+main .chat #messages .message .subcontainer-message {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 12px;
+}
+
+main .chat #messages .message .subcontainer-message .text-message {
+  width: 90%;
+  text-align: justify;
+}
+
+main .chat #messages .message .subcontainer-message .icon-message {
+  width: 5%;
+}
+
+/* Options */
+main .options {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 40%;
+  height: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Manos */
+main .dealer-hand,
+main .player-hand {
+  position: absolute;
+  transform: translate(-50%, 50%);
+  width: 20%;
+  height: 180px;
+  left: 50%;
+}
+
+main .dealer-hand {
+  top: 12%;
+}
+
+main .player-hand {
+  bottom: 28%;
+}
+
+main .dealer-hand .subcontainerDealer-hand,
+main .player-hand .subcontainerClient-hand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 33%;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card1,
+.card2,
+.card3 {
+  position: relative;
+}
+
+.card1 {
+  left: 60px;
+  z-index: 1;
+}
+
+.card2 {
+  z-index: 2;
+}
+
+.card3 {
+  left: -60px;
+  z-index: 3;
+}
+
+.options .option-button {
+  padding: 15px 60px;
+  border: none;
+  background-color: white;
+  color: rgba(66, 65, 65, 0.692);
+  text-transform: uppercase;
+  transition: ease 500ms;
+  font-weight: bold;
+  outline: none;
+  /* cursor: pointer; */
+}
+.options .option-button:hover {
+  background-color: rgb(66, 65, 65);
+  color: white;
+}

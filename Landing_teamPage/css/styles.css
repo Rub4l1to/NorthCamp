@@ -1,0 +1,135 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+/* Variables */
+:root {
+  --main-font-regular: "PT Serif", serif;
+  --second-font-regular: "Poppins", sans-serif;
+  --third-font-regular: "Montserrat", sans-serif;
+  --grid: 80%;
+}
+
+/* General */
+* {
+  box-sizing: border-box;
+}
+
+/* Main */
+main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  width: var(--grid);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+header .hTitle {
+  width: 40%;
+  text-align: center;
+}
+header .hTitle h1 {
+  font-family: var(--main-font-regular);
+  font-weight: 700;
+  line-height: 47.7px;
+  font-size: 36px;
+  letter-spacing: -2px;
+}
+header .hInfo {
+  width: 40%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+header .hInfo h3 {
+  font-family: var(--second-font-regular);
+  font-weight: 600;
+  line-height: 27px;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+header .hInfo p {
+  text-align: justify;
+  font-family: var(--second-font-regular);
+  font-weight: 400;
+  width: 80%;
+  line-height: 27px;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+/* Sections */
+.pContainer {
+  width: var(--grid);
+}
+
+/* Users */
+.pContainer .users {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.pContainer .users .user {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.pContainer .users .user .uImage {
+  position: relative;
+  width: 100%;
+}
+.pContainer .users .user .uImage img {
+  width: 100%;
+  height: 100%;
+}
+.pContainer .users .down {
+  padding-top: 50px;
+  margin: 100px 0 0 0;
+}
+.pContainer .users .user .uJob {
+  position: absolute;
+  right: -20px;
+  top: 0px;
+}
+.pContainer .users .user .uJob p {
+  font-family: var(--main-font-regular);
+  writing-mode: vertical-rl;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15.9px;
+}
+.pContainer .users .user .uName {
+  width: 100%;
+  font-family: var(--second-font-regular);
+}
+.pContainer .users .user .uName p {
+  line-height: 27px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+/* Footer */
+footer {
+  width: var(--grid);
+  padding: 40px 0;
+  text-align: center;
+  font-family: var(--third-font-regular);
+}
+footer p {
+  color: #a9a9a9;
+  font-size: 14px;
+  line-height: 17.07px;
+}

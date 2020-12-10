@@ -1,0 +1,242 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap");
+
+/* Variables */
+:root {
+  --main-font-regular: "Playfair Display", serif;
+  --second-font-regular: "Montserrat", sans-serif;
+  --grid: 70vw;
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+strong {
+  font-weight: bold;
+}
+/* Main */
+main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* width: 100vw; */
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  width: var(--grid);
+  margin: 20px 0;
+}
+
+header .title-container,
+header .subtitle-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+header .title-container h1 {
+  font-size: 48px;
+  line-height: 69.98px;
+  font-weight: 700;
+  font-family: var(--main-font-regular);
+}
+
+header .subtitle-container {
+  width: 40%;
+}
+
+header .subtitle-container p {
+  font-family: var(--second-font-regular);
+  font-size: 14px;
+  line-height: 17, 07px;
+  font-weight: 500;
+  font-style: italic;
+  margin-left: 20px;
+  color: Gray 2;
+}
+
+header .img-container {
+  margin-top: 30px;
+}
+
+header .img-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Sections */
+.italica {
+  font-style: italic;
+}
+.ingredients-container {
+  position: relative;
+}
+.ingredients-container,
+.instructions-container {
+  width: var(--grid);
+}
+
+.ingredients-container .title-container,
+.ingredients-container .title-container .title-subcontainer,
+.ingredients-container .title-container .info-subcontainer,
+.ingredients-container .ingredients-subcontainer {
+  width: 100%;
+}
+
+.title-container .info-subcontainer {
+  padding: 20px 0;
+}
+.title-container .title-subcontainer h3 {
+  font-family: var(--main-font-regular);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31.99px;
+}
+
+.title-container .info-subcontainer h4 {
+  font-family: var(--main-font-regular);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.99px;
+  font-style: italic;
+  color: Gray 1;
+}
+
+.ingredients-container .ingredients-subcontainer .ingredients-option {
+  display: flex;
+  /* width: 65%; */
+  width: 45%;
+  padding: 5px 0;
+}
+
+.ingredients-container
+  .ingredients-subcontainer
+  .ingredients-option
+  input[type="checkbox"] {
+  zoom: 1.5;
+}
+
+.ingredients-container .ingredients-subcontainer .ingredients-option p {
+  font-family: var(--second-font-regular);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  padding-left: 15px;
+}
+
+/* Ventana izquierda */
+.ingredients-container .data-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0;
+}
+.ingredients-container .data-container .data-option {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 50px;
+  margin: 20px 0;
+  width: 100%;
+}
+.ingredients-container .data-container .data-option .img-info {
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: red; */
+}
+.ingredients-container .data-container .data-option .img-info img {
+  width: 100%;
+}
+
+.ingredients-container .data-container .data-option .data-info {
+  width: 60%;
+  /* background-color: red; */
+}
+.ingredients-container .data-container .data-option .data-info h5 {
+  font-family: var(--second-font-regular);
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+  padding: 5px 0;
+}
+.ingredients-container .data-container .data-option .data-info p {
+  font-family: var(--second-font-regular);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+}
+
+/* Section - Instructions */
+.instructions-container {
+  margin-top: 20px;
+}
+.instructions-container .instructions-option {
+  display: flex;
+  margin: 20px 0;
+}
+.instructions-container .instructions-option .button {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: #f2994a;
+}
+.instructions-container .instructions-option .button p {
+  width: 40px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: var(--main-font-regular);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.instructions-container .instructions-option .p-instruction {
+  width: 90%;
+  font-family: var(--second-font-regular);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-left: 10px;
+  /* width: 40%; */
+}
+.instructions-container .instructions-option .url-instructions {
+  font-family: var(--second-font-regular);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 150%;
+  color: #bdbdbd;
+  margin: 20px 0;
+}
+/* Footer */
+
+footer {
+  font-family: var(--second-font-regular);
+}
+
+footer p {
+  font-weight: 600;
+  line-height: 17.07px;
+  color: #a9a9a9;
+  font-size: 14px;
+  padding: 20px 0;
+}

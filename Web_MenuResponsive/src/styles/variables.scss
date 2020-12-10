@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+$grid: 25%;
+
+// Mediaquerys
+$breakpoint:1200px;
+// Colors
+$menu-bg-color: rgb(49, 49, 49);
+$list-bg-color: rgb(83, 81, 81);
+$option-bg-color: rgba(70, 68, 68, 0.856);
+$title-color: white;
+
+// Fonts
+$main-font: "Open Sans", sans-serif;
+
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexbox-column {
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+}
+@mixin flexbox-row {
+  display: flex;
+  flex-direction: row;
+}

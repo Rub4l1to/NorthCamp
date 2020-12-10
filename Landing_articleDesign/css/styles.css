@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap");
+
+:root {
+  --main-font: "Anton", sans-serif;
+  --second-font: "Roboto", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+strong {
+  font-weight: bold;
+}
+/* Header */
+header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+.img-container {
+  height: 540px;
+  background-image: url(../img/henrique-sartori-among-us.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  background-position: center center;
+}
+
+.img-container .img-text-container {
+  width: 425px;
+  position: absolute;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+.img-container .img-text-container h2 {
+  font-family: var(--main-font);
+  font-size: 56px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+}
+.img-container .img-text-container p {
+  font-family: var(--second-font);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Sections */
+
+.info-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Firts apart */
+
+.info-container .firts-apart {
+  width: 80%;
+  margin-top: 40px;
+}
+
+.info-container .firts-apart .parrafos {
+  width: 60%;
+}
+
+.info-container .firts-apart .parrafos .parrafo {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 16px;
+  font-family: var(--second-font);
+  line-height: 22px;
+}
+
+.info-container .firts-apart .parrafos .parrafo a {
+  color: #ff005b;
+  text-decoration: none;
+  font-weight: bold;
+}
+.info-container .firts-apart .parrafos .parrafo .cursiva {
+  font-style: italic;
+}
+
+.info-container .firts-apart .img-secondA {
+  width: 60%;
+}
+.info-container .firts-apart .img-secondA img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #111111;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+footer p {
+  color: white;
+  font-family: var(--second-font);
+  font-size: 12px;
+  margin: 15px 0 5px 0;
+}

@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700;800&display=swap');
+
+// Colors
+$background-color: rgb(25, 25, 25);
+$main-color-letter: white;
+$status-alive-color: rgb(23, 191, 23);
+$status-dead-color: rgb(37, 37, 37);
+$info-card-color: #2F2F2F;
+
+
+// Fonts
+$main-font: "Roboto", sans-serif;
+$secundary-font: 'Dosis', sans-serif;
+
+// Grids
+$grid: 1280px;
+
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexbox-column {
+  @include flexbox;
+  flex-direction: column;
+}
+
+@mixin flexbox-row {
+    @include flexbox;
+    flex-direction: row;
+}
+  
