@@ -10,5 +10,3 @@ Landing proyects with HTML and CSS
 - https://www.flaticon.es
 - https://tablericons.com
 - https://akveo.github.io/eva-icons/#/
-
-### Proyects
