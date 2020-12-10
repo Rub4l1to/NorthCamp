@@ -1,30 +1,30 @@
 # NorthCamp - React Course JuLy
 
 ## Proyects 
-    - Scratch
+    ### Scratch
         - Empaquetado con webpack nativo
-    - Apis
+    ### Apis
         - Petición a api de pokemon
-    - Time
+    ### Time
         - Reloj y hora en tiempo react 
-    - Toggle
+    ### Toggle
         - Despliegue de mensaje con toggle
-    - Clock 
+    ### Clock 
         - Reloj en tiempo real con toggle
-    - Router 
+    ### Router 
         - Enrutador de react nativo
-    - Cra 
+    ### Cra 
         - Listado de usuarios separado por componentes
-    - List
+    ### List
         - Lista de las palabras que se escriban
-    - Thinking React
+    ### Thinking React
         - Filtrado de busqueda segun lo que escriba el usuario
-    - Lifting
+    ### Lifting
         - Cifrado mensaje cesar dependiendo del mensaje y el numero de separaciones que se ponga.
-    - Redux
+    ### Redux
         - Ejercico de suma con redux
-    - Final proyect
-        - Galeria de peliculas
+    ### Final proyect
+        #### Galeria de peliculas
             - Peticion a una API
             - Posibilidad de seleccionar peliculas favoritas
             - Detalles de cada pelicula al acceder a ella
