@@ -26,10 +26,10 @@
    ### Final proyect
    #### Galeria de peliculas
    - Peticion a una API
-        - Posibilidad de seleccionar peliculas favoritas
-        - Detalles de cada pelicula al acceder a ella
-         - Búsqueda predeterminada
-         - Responsive desing
-         - Categorización de cada pelicula
-         - Enrutamiento
+   - Posibilidad de seleccionar peliculas favoritas
+   - Detalles de cada pelicula al acceder a ella
+   - Búsqueda predeterminada
+   - Responsive desing
+   - Categorización de cada pelicula
+   - Enrutamiento
     
