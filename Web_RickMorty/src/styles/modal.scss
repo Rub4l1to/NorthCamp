@@ -7,7 +7,6 @@
   z-index: 2;
   position: fixed;
   top: 0;
-  display: none;
 
   &__window {
     @include flexbox;

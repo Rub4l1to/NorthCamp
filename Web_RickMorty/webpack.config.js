@@ -2,7 +2,6 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
 // webpack.config.js exporta un objeto con la configuracion
 module.exports = {
     // configuracion general
