@@ -7,6 +7,7 @@ $main-color-letter: white;
 $status-alive-color: rgb(23, 191, 23);
 $status-dead-color: rgb(37, 37, 37);
 $info-card-color: #2F2F2F;
+$modal-color: #FFFFFF ;
 
 
 // Fonts
@@ -29,5 +30,9 @@ $grid: 1280px;
 @mixin flexbox-row {
     @include flexbox;
     flex-direction: row;
+}
+
+.container{
+  width: 100%;;
 }
   

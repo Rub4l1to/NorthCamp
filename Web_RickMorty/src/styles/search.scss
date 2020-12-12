@@ -1,9 +1,7 @@
 .search {
-  width: 100%;
   @include flexbox;
   &__box {
     width: $grid;
-    // background-color: red;
     @include flexbox;
     padding: 20px 0;
     flex-wrap: wrap;
@@ -19,7 +17,6 @@
     color: $main-color-letter;
     font-size: 18px;
     transition: all 300ms;
-    position: relative;
 
     &:focus {
       outline: none;

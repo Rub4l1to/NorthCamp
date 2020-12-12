@@ -1,5 +1,6 @@
-.main-navegation {
-  width: 100%;
+.header {}
+
+.nav {
   @include flexbox;
   &__container {
     margin-bottom: 15px;

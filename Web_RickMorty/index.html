@@ -6,27 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow">
   <title>Rick & Morty</title>
-  <link rel="shortcut icon" type="image/png" href="/img/icon.png"/>
+  <link rel="shortcut icon" type="image/png" href="/img/icon.png" />
   <link rel="stylesheet" href="dist/build.css" />
 </head>
 
 <body>
-  <header>
-    <nav class="main-navegation">
-      <div class="main-navegation__container">
-        <img class="main-navegation__logo" src="img/logo.png" alt="" />
-        <span class="main-navegation__line"></span>
+
+  <!-- Heeader -->
+  <header class="container header">
+    <nav class="nav">
+      <div class="nav__container">
+        <img class="nav__logo" src="img/logo.png" alt="" />
+        <span class="nav__line"></span>
       </div>
     </nav>
   </header>
-  <section class="search">
+
+  <!-- Search -->
+  <section class="container search">
     <article class="search__box">
       <input type="text" name="name" id="" class="search__seeker" placeholder="Buscar..." />
     </article>
   </section>
-  <section class="cards">
-    <article class="cards__list">
-      <div class="card">
+
+  <!-- Cards -->
+  <section class="container cards">
+    <article id="list" class="cards__list">
+      <!-- <div class="card">
         <a class="card__link" href="#">
           <figure class="card__img-container">
             <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
@@ -42,201 +48,55 @@
             </div>
           </div>
         </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle card__circle--active"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle card__circle--active"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle card__circle--active"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle card__circle--active"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle card__circle--active"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle card__circle--active"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a class="card__link" href="#">
-          <figure class="card__img-container">
-            <img class="card__photo" src="/img/ricksanchez.jpg" alt="" />
-          </figure>
-          <div class="card__info">
-            <p class="card__title">Rick Sánchez</p>
-            <div class="card__body">
-              <span class="card__circle"></span>
-              <p class="card__status">
-                <span class="card__status-state">Alive</span> -
-                <span class="card__status-race">Alien</span>
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
+      </div> -->
     </article>
   </section>
-  <footer>
-    <div class="foot">
-      <p class="foot__text">Designed by NorthCamp School</p>
+
+  <!-- Modal
+  <section class="modal">
+    <article class="modal__window">
+      <figure class="modal__img-container">
+        <img class="modal__photo" src="/img/ricksanchez.jpg" alt="" />
+      </figure>
+      <div class="modal__data">
+        <figure class="modal__close">
+          <img class="modal__symbol" src="/img/times-solid.svg" alt="">
+        </figure>
+        <div class="modal__bibliography">
+          <p class="modal__title">Rick Sánchez</p>
+          <div class="modal__status">
+            <span class="modal__circle modal__circle--active"></span>
+            <p class="modal__status-info">
+              <span class="modal__status-state">Alive</span> -
+              <span class="modal__status-race">Alien</span>
+            </p>
+          </div>
+          <div class="dimensions modal__gender">
+            <p class=" modal__gender-title">Gender</p>
+            <p class="dimensions-text modal__gender-text">Male</p>
+          </div>
+          <div class="dimensions modal__origin">
+            <p class=" modal__origin-title">Origin</p>
+            <p class="dimensions-text modal__origin-text">Earth</p>
+          </div>
+          <div class="dimensions modal__location">
+            <p class="modal__location-title">Last know location:</p>
+            <p class="dimensions-text modal__location-text">Earth</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section> -->
+
+  <!-- Footer -->
+  <footer class="container footer">
+    <div class="footer__foot">
+      <p class="footer__text">Designed by NorthCamp School</p>
     </div>
   </footer>
+
 </body>
+
+<script src="dist/build.js"></script>
 
 </html>

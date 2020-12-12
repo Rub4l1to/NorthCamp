@@ -1,4 +1,4 @@
-import { main } from './main'
-import '../styles/main.scss'
+import { main } from './main';
+import '../styles/main.scss';
 
 main();

@@ -1,12 +1,13 @@
-.foot{
-    width: 100%;
-    @include flexbox;
-    padding: 30px 0;
-    &__text{
+.footer{
+    &__foot{
+        width: 100%;
+        @include flexbox;
+        padding: 30px 0;
+    }
+     &__text{
         font-family: $main-font;
         color: white;
         font-size: 18px;
-        font-weight: 400px;
         letter-spacing: -1px;
     }
 }

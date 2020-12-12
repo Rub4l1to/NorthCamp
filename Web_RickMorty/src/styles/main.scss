@@ -1,20 +1,23 @@
-@import 'reset';
+@import "reset";
 
 // Variables
-@import 'variables';
+@import "variables";
 
-body{
-    background-color: $background-color;
+body {
+  background-color: $background-color;
 }
 
 // Header
-@import 'header';
+@import "header";
 
 // Search
-@import 'search.scss';
+@import "search.scss";
 
 // List
-@import 'list';
+@import "list";
+
+// Modal
+@import "modal";
 
 // Footer
-@import 'footer';
+@import "footer";

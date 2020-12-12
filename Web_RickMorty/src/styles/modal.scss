@@ -1,0 +1,83 @@
+.modal {
+
+  @include flexbox;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 47, 47, 0.692);
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  display: none;
+
+  &__window {
+    @include flexbox;
+    border-radius: 10px;
+    width: 45%;
+    max-width: 45%;
+    height: 300px;
+    background-color: $modal-color;
+    overflow: hidden;
+    position: relative;
+  }
+  &__img-container {
+    width: 40%;
+    height: 100%;
+  }
+  &__photo {
+    object-fit: cover;
+  }
+
+  &__data {
+    width: 60%;
+    height: 100%;
+  }
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+  &__symbol {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__bibliography {
+    @include flexbox-column;
+    align-items: baseline;
+    font-family: $secundary-font;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 25px 0 10px;
+  }
+  &__status {
+    @include flexbox;
+  }
+  &__circle {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: $status-dead-color;
+    border: 2px solid white;
+    border-radius: 50%;
+
+    &--active {
+      background-color: $status-alive-color;
+    }
+  }
+  &__status-info {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+}
+
+.dimensions {
+  padding: 10px 0 0;
+  font-size: 18px;
+
+  &-text {
+    font-weight: 600;
+    padding-top: 5px;
+  }
+}
