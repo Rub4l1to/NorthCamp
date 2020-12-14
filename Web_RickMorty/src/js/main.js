@@ -1,12 +1,21 @@
-import { getCharactersPage } from './utils/querys';
-import { templateCard, showModal} from './utils/templates';
+import { drawCards } from "./utils/generic";
+import { getCharactersPage } from "./utils/querys";
+
+let characters = [];
 
 export const main = () => {
-  getCharactersPage(1).then(res => drawCards(res));
-  getCharactersPage(2).then(res => drawCards(res));
-  getCharactersPage(3).then(res => drawCards(res));
-
+  // Hacemos la peticion con el numero de personajes que queremos
+  getCharacters(55, drawCards);
 };
 
-// Pintamos los datos
-export const drawCards = (info) => info.map(item => templateCard(item))
+export const getCharacters = (n, callback) => {
+  let promises = [];
+
+  for (let i = 0; i <= n / 20; i++) {
+    promises.push(getCharactersPage(i));
+  }
+  Promise.all(promises).then((pages) => {
+    pages.map((item) => item.forEach((x) => characters.push(x)));
+    callback(characters);
+  });
+};

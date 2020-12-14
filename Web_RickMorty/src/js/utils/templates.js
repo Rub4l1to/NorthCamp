@@ -1,11 +1,28 @@
 // Card template
-export const templateCard = ({ id, name, status, species, image }) => {
+export const templateCard = ({
+  name,
+  status,
+  species,
+  image,
+  gender,
+  origin,
+  location,
+}) => {
   let circle =
     status.toLowerCase() === "alive"
       ? "card__circle card__circle--active"
       : "card__circle";
-  let card = `<div class="card">
-    <a class="card__link" href="#">
+
+  let card = document.createElement("div");
+  card.className = "card";
+
+  let link = document.createElement("a");
+  link.className = "card__link";
+  link.addEventListener("click", () =>
+    showModal(name, status, species, image, gender, origin, location)
+  );
+
+  let info = `
       <figure class="card__img-container">
         <img class="card__photo" src="${image}" alt="" />
       </figure>
@@ -18,47 +35,80 @@ export const templateCard = ({ id, name, status, species, image }) => {
             <span class="card__status-race">${species}</span>
           </p>
         </div>
-      </div>
-    </a>
-  </div>`;
-  document.querySelector("#list").innerHTML += card;
+      </div>`;
+
+  link.innerHTML = info;
+  card.append(link);
+  document.querySelector("#list").appendChild(card);
 };
 
 // Show modal
-export const showModal = (id, name, status, species, image) => {
+export const showModal = (
+  name,
+  status,
+  species,
+  image,
+  gender,
+  origin,
+  location
+) => {
+  let circle =
+    status.toLowerCase() === "alive"
+      ? "modal__circle modal__circle--active"
+      : "modal__circle";
 
-  //   `<section class="modal">
-  //       <article class="modal__window">
-  //         <figure class="modal__img-container">
-  //           <img class="modal__photo" src="/img/ricksanchez.jpg" alt="" />
-  //         </figure>
-  //         <div class="modal__data">
-  //           <figure class="modal__close">
-  //             <img class="modal__symbol" src="/img/times-solid.svg" alt="">
-  //           </figure>
-  //           <div class="modal__bibliography">
-  //             <p class="modal__title">Rick Sánchez</p>
-  //             <div class="modal__status">
-  //               <span class="modal__circle modal__circle--active"></span>
-  //               <p class="modal__status-info">
-  //                 <span class="modal__status-state">Alive</span> -
-  //                 <span class="modal__status-race">Alien</span>
-  //               </p>
-  //             </div>
-  //             <div class="dimensions modal__gender">
-  //               <p class=" modal__gender-title">Gender</p>
-  //               <p class="dimensions-text modal__gender-text">Male</p>
-  //             </div>
-  //             <div class="dimensions modal__origin">
-  //               <p class=" modal__origin-title">Origin</p>
-  //               <p class="dimensions-text modal__origin-text">Earth</p>
-  //             </div>
-  //             <div class="dimensions modal__location">
-  //               <p class="modal__location-title">Last know location:</p>
-  //               <p class="dimensions-text modal__location-text">Earth</p>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </article>
-  //     </section>`
-}
+  let modal = document.createElement("div");
+  modal.className = "modal";
+
+  let window = document.createElement("div");
+  window.className = "modal__window";
+
+  // Info del modal
+  // Imagen principal
+  let imagen = document.createElement("figure");
+  imagen.className = "modal__img-container";
+  imagen.innerHTML = `<img class="modal__photo" src="${image}" alt="" />`;
+  window.append(imagen);
+
+  // Datos del modal
+  let modalData = document.createElement("div");
+  modalData.className = "modal__data";
+
+  // Simbolo cruz
+  let cross = document.createElement("div");
+  cross.className = "modal__close";
+  cross.innerHTML = `<img class="modal__symbol" src="/img/times-solid.svg" alt="">`;
+  cross.addEventListener("click", () => removeModal());
+
+  let info = `
+  <div class="modal__bibliography">
+    <p class="modal__title">${name}</p>
+    <div class="modal__status">
+      <span class="${circle}"></span>
+      <p class="modal__status-info">
+        <span class="modal__status-state">${status}</span> -
+        <span class="modal__status-race">${species}</span>
+      </p>
+    </div>
+    <div class="dimensions modal__gender">
+      <p class=" modal__gender-title">Gender</p>
+      <p class="dimensions-text modal__gender-text">${gender}</p>
+    </div>
+    <div class="dimensions modal__origin">
+      <p class=" modal__origin-title">Origin</p>
+      <p class="dimensions-text modal__origin-text">${origin.name}</p>
+    </div>
+    <div class="dimensions modal__location">
+      <p class="modal__location-title">Last know location:</p>
+      <p class="dimensions-text modal__location-text">${location.name}</p>
+    </div>
+  </div> `;
+
+  modalData.innerHTML += info;
+  modalData.append(cross);
+  window.append(modalData);
+  modal.append(window);
+  document.body.append(modal);
+};
+
+export const removeModal = () => document.querySelector(".modal").remove();
