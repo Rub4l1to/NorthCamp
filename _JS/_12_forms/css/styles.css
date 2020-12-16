@@ -1,0 +1,51 @@
+* {
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(39, 48, 59);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container form {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* flex-direction: column; */
+}
+.container form input {
+  margin: 15px 0;
+  border: 1px solid white;
+  padding: 10px 0 10px 10px;
+  background-color: transparent;
+  color: white;
+ 
+}
+.container form input::placeholder{
+  color: rgba(255, 255, 255, 0.795);
+  font-family: Roboto;
+  font-weight: bold;
+}
+.container form #firtsName,
+.container form #lastName {
+  width: 45%;
+}
+.container form #correo,
+.container form #passw,
+.container form #boton {
+  width: 100%;
+}
+
+.container form #boton{
+  border: none;
+  background-color: #20d8aa ;
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.border{
+  border: 1px solid red !important;
+}

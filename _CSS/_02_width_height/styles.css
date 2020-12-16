@@ -1,0 +1,36 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 75vw;
+  height: 100vh;
+  border: 10px solid yellow;
+}
+
+#subcontainer {
+  width: 50%;
+  height: 60vh;
+  border: 8px solid blue;
+  margin: 5px;
+}
+
+#child-container {
+  width: 50%;
+  height: 100%;
+  border: 3px solid black;
+}
+
+.green {
+  background-color: rgb(9, 156, 9);
+}
+
+.purple {
+  background-color: rgb(106, 18, 109);
+}
+
+.red {
+  background-color: rgb(247, 16, 16);
+}

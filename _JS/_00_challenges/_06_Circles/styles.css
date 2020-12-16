@@ -1,0 +1,12 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.circleHover {
+  transition: all 300ms;
+}
+.circleHover:hover {
+  background-color: red !important;
+  transform: scale(1.2);
+}

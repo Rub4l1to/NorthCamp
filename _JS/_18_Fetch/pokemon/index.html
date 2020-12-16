@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokemons</title>
+</head>
+<link rel="stylesheet" href="styles.css" />
+
+<body>
+  <main>
+    <section class="section-list">
+      <article class="header">
+        <h3 class="header__title">Sacar pokemóns</h3>
+        <span class="header__title-line"></span>
+      </article>
+      <input class="button-primary" id="pokemonsSubmit" type="submit" value="Show Pokemons" />
+      <div class="list__pokemons"></div>
+    </section>
+    <section class="section-search-info">
+      <article class="header">
+        <h3 class="header__title">Sacar datos del pokemon</h3>
+        <span class="header__title-line"></span>
+      </article>
+      <form id="search-data_Form" class="classic-form" method="get">
+        <input type="text" id="pokemon" name="pokemon" class="classic-form__input" placeholder="Pon tu pokemon"
+          required />
+        <input class="button-primary" type="submit" value="Search" />
+      </form>
+      <div class="data">
+        <div class="abilities">
+          <h4>Habilidades</h4>
+          <div id="abilities-data"></div>
+        </div>
+        <div id="types">
+          <h4>Tipos</h4>
+          <div id="types-data"></div>
+        </div>
+      </div>
+    </section>
+    <section class="section-search-img">
+      <article class="header">
+        <h3 class="header__title">Sacar imagenes datos del pokemon</h3>
+        <span class="header__title-line"></span>
+      </article>
+      <form id="search-img_Form" class="classic-form" method="get">
+        <input type="text" id="pokemon" name="pokemon" class="classic-form__input" placeholder="Pon tu pokemon"
+          required />
+        <input class="button-primary" type="submit" value="Search" />
+      </form>
+      <div id="img"></div>
+    </section>
+    <div id="msg"></div>
+  </main>
+</body>
+<script src="index.js"></script>
+
+</html>

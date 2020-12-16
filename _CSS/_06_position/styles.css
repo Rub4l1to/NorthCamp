@@ -1,0 +1,25 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+section article {
+  position: absolute;
+  top: 10px;
+  border: 1px solid black;
+  padding: 20px 0;
+  width: 200px;
+}
+section #p1 {
+  left: 10px;
+}
+section #p2 {
+  right: 10px;
+}
