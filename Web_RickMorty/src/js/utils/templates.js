@@ -1,13 +1,7 @@
+import {removeModal } from './generic';
+
 // Card template
-export const templateCard = ({
-  name,
-  status,
-  species,
-  image,
-  gender,
-  origin,
-  location,
-}) => {
+export const templateCard = ({ name, status, species, image, gender, origin, location }) => {
   let circle =
     status.toLowerCase() === "alive"
       ? "card__circle card__circle--active"
@@ -43,15 +37,7 @@ export const templateCard = ({
 };
 
 // Show modal
-export const showModal = (
-  name,
-  status,
-  species,
-  image,
-  gender,
-  origin,
-  location
-) => {
+export const showModal = ( name, status, species, image, gender, origin, location ) => {
   let circle =
     status.toLowerCase() === "alive"
       ? "modal__circle modal__circle--active"
@@ -110,5 +96,3 @@ export const showModal = (
   modal.append(window);
   document.body.append(modal);
 };
-
-export const removeModal = () => document.querySelector(".modal").remove();
