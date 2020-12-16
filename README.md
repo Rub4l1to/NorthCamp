@@ -8,9 +8,6 @@
 - https://akveo.github.io/eva-icons/#/
 
 ### Proyects 
-- Webpack 
-- SaSS
-- JS
 
 ## [404-NotFound](https://github.com/Rub4l1to/NorthCamp/tree/_Front-End_Proyects/Landing_404-NotFound)
 ## [Article Design](https://github.com/Rub4l1to/NorthCamp/tree/_Front-End_Proyects/Landing_articleDesign)
