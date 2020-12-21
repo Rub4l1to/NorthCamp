@@ -63,7 +63,7 @@ export const showModal = ( name, status, species, image, gender, origin, locatio
   // Simbolo cruz
   let cross = document.createElement("div");
   cross.className = "modal__close";
-  cross.innerHTML = `<img class="modal__symbol" src="/img/times-solid.svg" alt="">`;
+  cross.innerHTML = `<img class="modal__symbol" src="./img/times-solid.svg" alt="">`;
   cross.addEventListener("click", () => removeModal());
 
   let info = `

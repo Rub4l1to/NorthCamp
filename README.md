@@ -1,4 +1,5 @@
 # NorthCamp
+<<<<<<< Updated upstream
 ### Compilers
 - https://www.sassmeister.com
 
@@ -17,3 +18,8 @@
 ## [Menu Responsive](https://github.com/Rub4l1to/NorthCamp/tree/_Front-End_Proyects/Web_MenuResponsive)
 ## [Black Jack](https://github.com/Rub4l1to/NorthCamp/tree/_Front-End_Proyects/Web_blackJack)
 ## [Rick & Morty](https://github.com/Rub4l1to/NorthCamp/tree/_Front-End_Proyects/Web_RickMorty)
+=======
+## [CSS - Notes](https://github.com/Rub4l1to/NorthCamp/tree/_Front-End_Notes/_CSS)
+## [HTML - Notes](https://github.com/Rub4l1to/NorthCamp/tree/_Front-End_Notes/_HTML)
+## [Javascript - Notes](https://github.com/Rub4l1to/NorthCamp/tree/_Front-End_Notes/_JS)
+>>>>>>> Stashed changes
