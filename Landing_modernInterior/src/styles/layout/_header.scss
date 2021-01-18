@@ -1,0 +1,46 @@
+.header {
+  @include flexbox;
+  justify-content: center;
+  &__container {
+    @include flexbox-between;
+    width: $grid-width;
+    max-width: $grid-width;
+    padding: 40px 0;
+  }
+
+  &__box-logo {
+    @include flexbox-standar;
+    padding: 10px;
+    border: 1px solid white;
+  }
+
+  &__img-logo {
+    font-size: 1.4em;
+    font-family: $logo-font;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+}
+
+.main-navegation {
+  @include flexbox-end;
+
+  width: 80%;
+  &__list {
+    @include flexbox-standar;
+    width: 40%;
+    justify-content: space-between;
+  }
+  &__item {
+    font-family: $text-font;
+    font-size: 1.8em;
+  }
+  &__link {
+    color: $secondary-color;
+    padding: 5px 0;
+    &--active {
+      font-weight: bold;
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+}

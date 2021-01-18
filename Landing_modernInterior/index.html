@@ -4,28 +4,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
-  <title>Rick & Morty</title>
-  <link rel="shortcut icon" type="image/png" href="/img/icon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Modern Interior</title>
   <link rel="stylesheet" href="dist/build.css" />
 </head>
 
 <body>
   <header class="header">
-    <div class="header__box-logo">
-      <span class="header_img-logo">This Interior</span>
+    <div class="header__container">
+      <div class="header__box-logo">
+        <span class="header__img-logo">This Interior</span>
+      </div>
+      <nav class="main-navegation">
+        <ul class="main-navegation__list">
+          <li class="main-navegation__item">
+            <a href="#" class="main-navegation__link main-navegation__link--active">Home</a>
+          </li>
+          <li class="main-navegation__item">
+            <a href="#" class="main-navegation__link">Collection</a>
+          </li>
+          <li class="main-navegation__item">
+            <a href="#" class="main-navegation__link">About</a>
+          </li>
+          <li class="main-navegation__item">
+            <a href="#" class="main-navegation__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="main-navegation">
-      <ul class="main-navegation__list">
-        <li class="main-navegation__item"><a href="" class="main-navegation__link main-navegation__link--active">Item 1</a></li>
-        <li class="main-navegation__item"><a href="" class="main-navegation__link">Item 2</a></li>
-        <li class="main-navegation__item"><a href="" class="main-navegation__link">Item 3</a></li>
-        <li class="main-navegation__item"><a href="" class="main-navegation__link">Item 4</a></li>
-      </ul>
-    </nav>
   </header>
 
+  <section class="section-about">
+    <div class="container-grid row">
+      <article class="section-about__left">
+        <h1 class="header-primary">Modern Interior</h1>
+        <div class="section-about__text">
+          A full-Service residential & commercial interior design and staging
+          company offering professional organizing & eco-services.
+        </div>
+        <a href="#" class="button"><span class="button__text">Read more</span> &rarr;</a>
+      </article>
+      <article class="section-about__right">
+        <img class="section-about__image" src="src/img/photo1.png" alt="living room" />
+        <div class="card">
+          <div class="card__info">
+            <img class="card__profile" src="src/img/photo2.png" alt="author" />
+            <div class="card__biography">
+              <h4 class="card__author">Aliza Webber</h4>
+              <p class="card__job">Interior designer</p>
+            </div>
+          </div>
+          <h3 class="card__footer">Designed in 2020 by Aliza Webber</h3>
+        </div>
+      </article>
+    </div>
+  </section>
 
+  <footer class="footer">
+    <div class="container-grid center-content">
+      <p class="footer__text">&copy; Adrián Pérez García 2020</p>
+    </div>
+  </footer>
 </body>
 
 </html>

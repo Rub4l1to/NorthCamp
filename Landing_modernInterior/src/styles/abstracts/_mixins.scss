@@ -1,0 +1,20 @@
+@mixin flexbox {
+    display: flex;
+}
+
+@mixin flexbox-standar {
+    @include flexbox;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexbox-end {
+    @include flexbox;
+    justify-content: flex-end;
+}
+
+@mixin flexbox-between {
+    @include flexbox;
+    justify-content: space-between;
+}
+

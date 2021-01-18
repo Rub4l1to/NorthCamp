@@ -1,0 +1,43 @@
+.card {
+  position: absolute;
+  bottom: -9em;
+  right: 3.5em;
+  background-color: $main-background-color;
+  max-width: 55%;
+  padding: 20px;
+
+  &__info {
+    @include flexbox;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+
+  &__profile {
+    width: 4em;
+    border-radius: 50%;
+  }
+
+  &__biography {
+    width: 85%;
+    @include flexbox;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $text-font;
+  }
+
+  &__author {
+    margin-bottom: 10px;
+  }
+
+  &__job {
+    color: $terciary-color;
+  }
+
+  &__footer {
+    width: 70%;
+    font-family: $titles-font;
+    font-size: 2.4em;
+    font-weight: 700;
+    line-height: 30px;
+  }
+}

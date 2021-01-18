@@ -1,8 +1,21 @@
-@import 'reset';
+// Abstracts
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-// Variables
-@import 'variables';
+// Base
+@import "base/reset";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-// Header
-@import 'header';
+// Components
+@import "components/card";
+@import "components/button";
+
+// Layouts
+@import "layout/grid";
+@import "layout/header";
+
+// Pages
+@import "pages/home";
 

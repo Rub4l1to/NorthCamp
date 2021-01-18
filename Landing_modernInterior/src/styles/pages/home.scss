@@ -1,0 +1,51 @@
+body {
+  background-color: $main-background-color;
+}
+
+.section-about {
+  @include flexbox;
+  justify-content: center;
+  margin-top: $gutter_vertical;
+
+  // Zona de la información
+
+  &__text {
+    font-family: $text-font;
+    font-size: 2.4em;
+    font-weight: 300;
+    width: 50%;
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin: 2em 0 1.5em;
+  }
+
+  // Zona de la imagen
+
+  &__right {
+    position: relative;
+    @include flexbox-standar;
+    justify-content: flex-end;
+  }
+
+  &__image {
+    width: 75em;
+    height: 55vh;
+  }
+}
+
+
+
+.footer{
+  @include flexbox-standar;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 5em 0;
+
+  &__text{
+    font-family: $text-font;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: $footer-color;
+  }
+}

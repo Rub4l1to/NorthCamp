@@ -1,0 +1,6 @@
+.container-grid {
+  width: $grid-width;
+  max-width: $grid-width;
+}
+
+.center-content{@include flexbox-standar}

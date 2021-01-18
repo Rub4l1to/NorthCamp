@@ -1,0 +1,10 @@
+.button {
+  font-family: $text-font;
+  font-weight: 600;
+  color: $secondary-color;
+  font-size: 1.8em;
+
+  &__text{
+      margin-right: 5px;
+  }
+}
