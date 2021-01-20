@@ -4,11 +4,12 @@
 
 let digits = [];
 
-const generateNumber = () => (Math.random() * (10 - 0)).toFixed(0);
+const generateNumber = () => (Math.random() * (11 - 0)).toFixed(0);
 
 const checkIfExist = (number) => digits.includes(number);
 
 function randomNumber(number) {
+
     if (digits.length !== 10) {
         if (checkIfExist(number)) 
             randomNumber(generateNumber());
@@ -21,14 +22,7 @@ function randomNumber(number) {
    
 }
 
-randomNumber(generateNumber());
-randomNumber(generateNumber());
-randomNumber(generateNumber());
-randomNumber(generateNumber());
-randomNumber(generateNumber());
-randomNumber(generateNumber());
-randomNumber(generateNumber());
-randomNumber(generateNumber());
-randomNumber(generateNumber());
-randomNumber(generateNumber());
-randomNumber(generateNumber());
+
+for (let i = 0; i <= 10; i++) {
+    randomNumber(generateNumber());
+}

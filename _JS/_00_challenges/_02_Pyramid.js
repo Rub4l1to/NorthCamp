@@ -4,15 +4,14 @@
 // #####
 
 const pyramid = (n) => {
-    let p = "";
-    let m = n - 1;
+    let piramide = "";
+    let espacios = n - 1;
     for (i = 1; i <= n; i++) {
-      p = p.trim();
-      p = " ".repeat(m) + p + (i > 1 ? " " : "") + "#";
-      m--;
-      console.log(p);
+      piramide = piramide.trim();
+      piramide = " ".repeat(espacios) + piramide + (i > 1 ? " " : "") + "#";
+      espacios--;
+      console.log(piramide);
     }
   };
   
-  pyramid(3);
-  
+  pyramid(5);
