@@ -1,0 +1,53 @@
+body {
+  background-color: $main-background-color;
+}
+
+.parent {
+  width: 50%;
+  height: 50vh;
+  position: relative;
+  background-color: rgba(167, 165, 165, 0.849);
+}
+
+.center-item {
+  @include center;
+
+  p {
+    color: $secondary-color;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+}
+
+// Mixins with params
+.centerAsYouWish {
+  @include center-decision(true, false);
+}
+
+// Extend
+.center-container {
+  @include center;
+
+  &__figure {
+    @extend .center-container;
+    background-color: #222;
+  }
+  &__image {
+    @extend .center-container;
+    width: 200px;
+    height: 200px;
+  }
+  &__caption {
+    @extend .center-container;
+    font-size: 12px;
+  }
+}
+
+// Calc
+.row{
+ 
+  width: calc(100% - 50px);
+  background-color: red;
+  height: 20vh;
+
+}
