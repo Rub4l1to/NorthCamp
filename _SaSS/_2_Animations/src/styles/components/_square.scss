@@ -1,0 +1,30 @@
+.square {
+  width: 50%;
+  height: 250px;
+  transform: rotate(360deg);
+  animation: ease 2s linear 4s infinite alternate;
+
+  &--red {
+    animation-name: rotateSquarePositive;
+    background-color: red;
+    transform-origin: top left;
+  }
+
+  &--purple {
+    animation-name: rotateSquareNegative;
+    background-color: purple;
+    transform-origin: bottom left;
+  }
+
+  &--blue {
+    animation-name: rotateSquareNegative;
+    background-color: blue;
+    transform-origin: top right;
+  }
+
+  &--orange {
+    animation-name: rotateSquarePositive;
+    background-color: orange;
+    transform-origin: bottom right;
+  }
+}
