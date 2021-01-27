@@ -1,0 +1,28 @@
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes circle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(1turn); }
+}
+
+@keyframes changeColorFirst {
+  from { background-color: red; }
+  75% { background-color: yellow; }
+  to { background-color: red; }
+}
+
+@keyframes changeColorSecond {
+  from { background-color: purple; }
+  75% { background-color: green; }
+  to { background-color: purple; }
+}
+
+@keyframes changeColorThird {
+  from { background-color: blue; }
+  75% { background-color: brown; }
+  to { background-color: blue; }
+}

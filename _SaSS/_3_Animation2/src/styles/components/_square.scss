@@ -1,0 +1,24 @@
+.square {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  &--first {
+    @include flexbox;
+    width: 280px;
+    height: 280px;
+    animation-name: circle, changeColorFirst;
+  }
+
+  &--second {
+    @include flexbox;
+    width: 180px;
+    height: 180px;
+    animation-name: circle, changeColorSecond;
+  }
+
+  &--third {
+    width: 100px;
+    height: 100px;
+    animation-name: circle, changeColorThird;
+  }
+}

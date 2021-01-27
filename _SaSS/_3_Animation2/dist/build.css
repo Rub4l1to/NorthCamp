@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@400;700&family=Montserrat:wght@300;500;600&display=swap);
+@-webkit-keyframes circle {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(1turn); } }
+@keyframes circle {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(1turn); } }
+
+@-webkit-keyframes changeColorFirst {
+  from {
+    background-color: red; }
+  75% {
+    background-color: yellow; }
+  to {
+    background-color: red; } }
+
+@keyframes changeColorFirst {
+  from {
+    background-color: red; }
+  75% {
+    background-color: yellow; }
+  to {
+    background-color: red; } }
+
+@-webkit-keyframes changeColorSecond {
+  from {
+    background-color: purple; }
+  75% {
+    background-color: green; }
+  to {
+    background-color: purple; } }
+
+@keyframes changeColorSecond {
+  from {
+    background-color: purple; }
+  75% {
+    background-color: green; }
+  to {
+    background-color: purple; } }
+
+@-webkit-keyframes changeColorThird {
+  from {
+    background-color: blue; }
+  75% {
+    background-color: brown; }
+  to {
+    background-color: blue; } }
+
+@keyframes changeColorThird {
+  from {
+    background-color: blue; }
+  75% {
+    background-color: brown; }
+  to {
+    background-color: blue; } }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  outline: none; }
+
+ul, li, ol {
+  list-style: none; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.square {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s; }
+  .square--first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
+    -webkit-animation-name: circle, changeColorFirst;
+            animation-name: circle, changeColorFirst; }
+  .square--second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    -webkit-animation-name: circle, changeColorSecond;
+            animation-name: circle, changeColorSecond; }
+  .square--third {
+    width: 100px;
+    height: 100px;
+    -webkit-animation-name: circle, changeColorThird;
+            animation-name: circle, changeColorThird; }
+
+body {
+  background-color: #181719;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; }
+
+.container {
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 20; }
+
+
+/*# sourceMappingURL=build.css.map*/
