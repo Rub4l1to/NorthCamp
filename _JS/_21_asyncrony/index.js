@@ -9,26 +9,28 @@ const getPlayerScore = (data) => {
   });
 };
 
-getPlayerScore((result) =>
-    getPlayerScore((result2) => {
-        getPlayerScore((result3) => {
-            console.log([result, result2, result3])
-        })
-    })
-);
+// getPlayerScore((result) =>
+//     getPlayerScore((result2) => {
+//         getPlayerScore((result3) => {
+//             console.log([result, result2, result3])
+//         })
+//     })
+// );
 
-const startGame = (players) => {
+const startGame = (players, callback) => {
   let promises = [];
   for (let i = 1; i <= players; i++) {
     getPlayerScore((result) => {
       promises.push(result);
       if (promises.length == players) {
         Promise.all(promises).then((values) => {
-          console.log(values);
+          callback(values)
         });
       }
     });
   }
 };
 
-startGame(6);
+startGame(6, (data) => {
+  console.log(data)
+});
