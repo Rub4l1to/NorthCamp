@@ -3,21 +3,23 @@ const main = () => {
   initGame();
 };
 
-const initGame = () => {
+const initGame = async () => {
   deck = getDeck();
   // Primera accion
-  sendTimeOut(addCardToPlayerHand, addCardToDealerHand, addCardToPlayerHand);
+  await sleep(addCardToPlayerHand, 1200);
+  await sleep(addCardToDealerHand, 1200);
+  await sleep(addCardToPlayerHand, 1200);
 
-  // Preguntamos 
-  setTimeout(() => {
-    showMessage("¿Qué desea hacer?");
-    showMessage(" HIT | STAND");
-  }, 900);
+  // Preguntamos
 
+  showMessage("¿Qué desea hacer?");
+  await sleep(showMessage(" HIT | STAND"), 800);
 };
 
-const sendTimeOut = (...func) => func.map(item => setTimeout(() => item(), 800));
-
+const sleep = (func, time) =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => resolve(func()), time);
+  });
 
 // Remove modal
 const toggleModal = (container) => {
@@ -94,7 +96,10 @@ const getHandLength = (container) =>
 const setCards = (container, card, hand) => {
   let div = document.createElement("div");
   let img = document.createElement("img");
-  div.setAttribute("class", `card animated fadeIn card${getHandLength(container)}`);
+  div.setAttribute(
+    "class",
+    `card animated fadeIn card${getHandLength(container)}`
+  );
 
   img.setAttribute("src", `./assets/cards/${card}.png`);
   div.appendChild(img);
@@ -105,27 +110,21 @@ const setCards = (container, card, hand) => {
 };
 
 // Acciones
-const checkAction = (action) => {
+const checkAction = async (action) => {
   let selected = action.target.getAttribute("id");
   if (selected === "hit") {
-    sendTimeOut(addCardToPlayerHand, addCardToDealerHand, addCardToDealerHand);
-  };
-  if (selected === "stand") {
-    sendTimeOut(addCardToDealerHand, addCardToDealerHand);
+    await sleep(addCardToPlayerHand, 1000);
+    await sleep(addCardToDealerHand, 1000);
+    await sleep(addCardToDealerHand, 1000);
   }
-  continueGame();
-  // if (selected === "split") console.log(playerHand);
+  if (selected === "stand") {
+    await sleep(addCardToDealerHand, 1000);
+    await sleep(addCardToDealerHand, 1000);
+  }
+
+  await sleep(getWinner(playerHand, dealerHand), 4000);
 };
 
-const continueGame = () =>{
-  setTimeout(() => {
-    showMessage("¿Quieres jugar otra vez?");
-  
-  }, 500);
-  setTimeout(() => {
-    getWinner(playerHand, dealerHand)
-  }, 1500)
-}
 
 // Messages
 const showMessage = (message) => createMessage(message, getDate());
@@ -160,8 +159,8 @@ const createMessage = (message, date) => {
 const removeChildsContainer = (container) => {
   while (container.firstChild) {
     container.removeChild(container.firstChild);
-  };
-}
+  }
+};
 
 // Date
 const getDate = () =>
@@ -187,7 +186,7 @@ const reset = () => {
   dealerHand = [];
   removeChildsContainer(document.querySelector(".subcontainerDealer-hand"));
   removeChildsContainer(document.querySelector(".subcontainerClient-hand"));
-  removeChildsContainer(document.querySelector("#messages"))
+  removeChildsContainer(document.querySelector("#messages"));
   toggleModal(document.querySelector(".modal-window"));
   toggleModal(document.querySelector(".modal-final"));
 };
@@ -195,8 +194,8 @@ const reset = () => {
 // Audios
 // Background Audio
 const playAudio = () => {
-  let newAudio = new Audio('../assets/audio/backgroundAudio.mp3').play();
-    newAudio.volume = 0.01;
+  let newAudio = new Audio("../assets/audio/backgroundAudio.mp3").play();
+  newAudio.volume = 0.01;
 };
 
 // Initialition

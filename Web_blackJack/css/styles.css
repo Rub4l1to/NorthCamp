@@ -16,7 +16,7 @@ main {
 /* ANIMACIONES */
 
 .animated {
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-fill-mode: both;
 }
 
@@ -37,6 +37,7 @@ main {
 .fadeIn {
   animation-name: fadeIn;
 }
+
 
 /* Modal */
 .modal {
