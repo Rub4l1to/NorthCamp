@@ -5,11 +5,11 @@ import Contactos from "./components/Contactos";
 function App() {
   const [people, setPeople] = useState([
     { name: "Raul", online: false },
-    { name: "AA Alex", online: true },
+    { name: "Alex", online: true },
     { name: "Mama", online: false },
     { name: "Cesar hijoputa", online: true },
     { name: "Cesar II hijoputa", online: true },
-    { name: "Carlos", online: true },
+    { name: "Carlos", online: true }
   ]);
 
   return (
