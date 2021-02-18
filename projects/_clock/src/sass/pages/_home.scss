@@ -1,0 +1,5 @@
+.container{
+    @include width($grid-width, $grid-width-max);
+    @include flexbox(center, center);
+    
+}
