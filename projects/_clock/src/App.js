@@ -18,9 +18,9 @@ function App() {
         <section className="container">
           <Clock />
         </section>
-        <section>
+        <section className="contactos">
           <Contactos {...{ people }} />
-        </section>
+        </section>    
       </div>
     </Fragment>
   );
