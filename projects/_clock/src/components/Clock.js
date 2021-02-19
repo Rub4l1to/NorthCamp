@@ -15,6 +15,8 @@ export default function Clock() {
     return () => clearInterval(interval);
   };
 
+  // const handleHover = () =>  setDateState(new Date());
+
   const getTime = (getData) => {
     let info = 0;
     if (getData === "hours") info = date.getHours();
@@ -25,7 +27,9 @@ export default function Clock() {
 
   return (
     <div className="clock">
-      <p className="clock__time">
+      <p className="clock__time"
+      //  onMouseOver= {handleHover}
+       >
         <Segment {...{ value: getTime("hours") }} />:
         <Segment {...{ value: getTime("minutes") }} />:
         <Segment {...{ value: getTime("seconds") }} />
