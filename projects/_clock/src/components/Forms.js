@@ -7,45 +7,44 @@ export default function Forms() {
   const [email, setEmail] = useState("");
   const [check, setCheck] = useState(false);
 
-  const handleUsername = (ev) => setUsername(ev.target.value);
-  const handlePassword = (ev) => setPassword(ev.target.value);
-  const handleSecondPassword = (ev) => setSecondPassword(ev.target.value);
-  const handleEmail = (ev) => setEmail(ev.target.value);
+  const validate = (e) => {
+    e.prevenDefaul();
 
-  const handleSubmit = () => {
-    password !== secondPassword ? setCheck(true) : setCheck(false)
+    if(!username.trim() || password !== secondPassword ){
+      setCheck(true)
+    }else setCheck(false)
   }
 
   return (
     <Fragment>
-     
-      <div>
+
+      <form onSubmit={validate}>
         <input
           type="text"
-          onChange={handleUsername}
+          onChange={(e) => setUsername(e.target.value)}
           placeholder="Nombre de usuario"
           value={username}
         />
-        <input type="password" onChange={handlePassword} value={password} />
+        <input type="password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+        />
         <input
           type="password"
-          onChange={handleSecondPassword}
+          onChange={(e) => setSecondPassword(e.target.value)}
           value={secondPassword}
           className={check ? 'red' : null}
-           
         />
-        
-     
         <input
           type="email"
-          onChange={handleEmail}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Correo"
           value={email}
         />
-        <input type="submit" onClick={handleSubmit} value="Enviar" />
-      </div>
-      {check &&  <h1 style={{color: "red"}}>Las contraseñas no coinciden</h1>}
-     
+        <input type="submit" value="Enviar" />
+      </form>
+      {check && <h1 style={{ color: "red" }}>Las contraseñas no coinciden</h1>}
+
     </Fragment>
   );
 }
