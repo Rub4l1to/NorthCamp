@@ -8,16 +8,12 @@ export default function Forms() {
   const [check, setCheck] = useState(false);
 
   const validate = (e) => {
-    e.prevenDefaul();
-
-    if(!username.trim() || password !== secondPassword ){
-      setCheck(true)
-    }else setCheck(false)
-  }
+    e.preventDefault();
+    password !== secondPassword ? setCheck(true) : setCheck(false);
+  };
 
   return (
     <Fragment>
-
       <form onSubmit={validate}>
         <input
           type="text"
@@ -25,7 +21,8 @@ export default function Forms() {
           placeholder="Nombre de usuario"
           value={username}
         />
-        <input type="password"
+        <input
+          type="password"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
@@ -33,7 +30,7 @@ export default function Forms() {
           type="password"
           onChange={(e) => setSecondPassword(e.target.value)}
           value={secondPassword}
-          className={check ? 'red' : null}
+          className={check ? "red" : null}
         />
         <input
           type="email"
@@ -44,7 +41,6 @@ export default function Forms() {
         <input type="submit" value="Enviar" />
       </form>
       {check && <h1 style={{ color: "red" }}>Las contraseñas no coinciden</h1>}
-
     </Fragment>
   );
 }
