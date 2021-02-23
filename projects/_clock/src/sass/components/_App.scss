@@ -3,7 +3,9 @@
   @include flexbox(center, center, column);
 }
 
-
+.container{
+  margin: 1em 0;
+}
 .red{
   border: 1px solid red;
 }

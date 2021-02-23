@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Segment } from "./Segment";
 
-export default function Clock() {
+const Clock = () => {
   const [date, setDateState] = useState(new Date());
 
   useEffect(() => {
@@ -37,3 +37,4 @@ export default function Clock() {
     </div>
   );
 }
+export default Clock;

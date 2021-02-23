@@ -1,0 +1,26 @@
+.films-container {
+  @include flexbox(space-evenly !important, center);
+  flex-wrap: wrap;
+}
+
+.film {
+  box-shadow: 10px 9px 18px -11px rgba(0, 0, 0, 0.75);
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  padding: 20px 0;
+  width: 30%;
+  margin: 10px 0;
+  @include flexbox(center, center, column);
+
+  &__title {
+    font-size: 0.8em;
+  }
+  &__rank {
+    font-size: 0.8em;
+  }
+  &__rating {
+    font-size: 0.8em;
+  }
+  &__year {
+    font-size: 0.8em;
+  }
+}

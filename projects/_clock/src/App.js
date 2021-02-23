@@ -1,8 +1,11 @@
 import { Fragment, useState } from "react";
-import Clock from "./components/Clock";
-import Contactos from "./components/Contactos";
-import Contador from "./components/Contador";
-import Forms from "./components/Forms";
+
+// import Clock from "./components/Clock";
+// import Contactos from "./components/Contactos";
+// import Contador from "./components/Contador";
+// import Forms from "./components/Forms";
+// import Listas from "./components/Listas";
+import FilmList from "./components/FilmList";
 
 function App() {
   const [people, setPeople] = useState([
@@ -18,18 +21,16 @@ function App() {
     <Fragment>
       <div className="app-container">
         <section className="container">
+          {/* 
           <Clock />
-        </section>
-        <section className="contactos">
+          <Listas />
           <Contactos {...{ people }} />
-        </section>    
-        <section className="counter">
           <Contador />
+          <Forms /> */}
+          <FilmList />
         </section>
 
-        <section>
-          <Forms />
-        </section>
+
       </div>
     </Fragment>
   );

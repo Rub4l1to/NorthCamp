@@ -10,7 +10,7 @@ export default function Contador() {
       <div>
         <button onClick={handleCont}>Incrementar</button>
       </div>
-      <div>{contador}</div>
+      <div className="counter">{contador}</div>
     </Fragment>
   );
 }
