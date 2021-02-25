@@ -18,9 +18,9 @@ const FilmList = () => {
 
   return (
     <div className="container films-container">
-      {films.map(
-        (item, index) => index < 20 && <Film key={index} {...{ item }} />
-      )}
+      {films.slice(0, 20).map((item, index) => (
+        <Film key={index} {...{ item }} />
+      ))}
     </div>
   );
 };

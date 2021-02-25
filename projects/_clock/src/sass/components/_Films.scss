@@ -1,6 +1,7 @@
 .films-container {
   @include flexbox(space-evenly !important, center);
   flex-wrap: wrap;
+  font-size: 2em;
 }
 
 .film {
