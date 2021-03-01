@@ -8,6 +8,7 @@ import { Fragment, useState } from "react";
 // import Listas from "./components/Listas";
 import FilmList from "./components/FilmList";
 import Cronometer from "./components/Cronometer";
+import TodoList from "./components/TodoList";
 
 function App() {
   const [people, setPeople] = useState([
@@ -20,7 +21,7 @@ function App() {
   ]);
 
   return (
-    <Fragment>ñ
+    <Fragment>
       <div className="app-container">
         <section className="container">
           {/* 
@@ -31,7 +32,9 @@ function App() {
           <Forms /> */}
           {/* <FilmList /> */}
 
-          <Cronometer />
+          {/* <Cronometer /> */}
+          <TodoList />
+          
         </section>
 
 

@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import { Segment } from "./Segment";
 
 const Cronometer = () => {
   const [time, setTime] = useState(0);
@@ -6,20 +7,29 @@ const Cronometer = () => {
 
   useEffect(() => {
     setTimeout(() => {
-        handleTransform(targetTime);
+      if (time) setTime(time - 1);
     }, 1000);
-    return () => {
-      setTime(0);
-    };
-  }, [targetTime]);
 
-  const handleTransform = (seconds) => {
-    console.log(seconds);
+    return () => {
+      clearTimeout();
+    };
+  }, [time]);
+
+  const getTime = (getData) => {
+    let info = 0;
+    if (getData === "hours") info = Math.floor(time / (60 * 60));
+    if (getData === "minutes") info = Math.floor((time / 60) % 60);
+    if (getData === "seconds") info = time % 60;
+    return info < 10 ? "0" + info : info;
   };
 
   return (
     <Fragment>
-      <h2>{time}</h2>
+      <p className="clock__time">
+        <Segment {...{ value: getTime("hours") }} />:
+        <Segment {...{ value: getTime("minutes") }} />:
+        <Segment {...{ value: getTime("seconds") }} />
+      </p>
 
       <input
         type="number"
@@ -27,7 +37,13 @@ const Cronometer = () => {
         onChange={(e) => setTargetTime(e.target.value)}
       />
 
-      <button className="cronometer__button">Start</button>
+      <button
+        className="cronometer__button"
+        onClick={() => setTime(targetTime)}
+      >
+        {" "}
+        Start{" "}
+      </button>
     </Fragment>
   );
 };
