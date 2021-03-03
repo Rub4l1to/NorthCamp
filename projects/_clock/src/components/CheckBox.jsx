@@ -1,18 +1,14 @@
-import React, { useState } from "react";
-
-const CheckBox = ({ text }) => {
-  const [done, setDone] = useState(false);
-
+const CheckBox = ({ index, item, handleDone }) => {
   return (
     <div>
-      <label className={done ? "cross" : ""} htmlFor="option">
+      <label className={item.done ? "cross" : ""} htmlFor={"option-" + index}>
         <input
-          onClick={() => !done ? setDone(true) : setDone(false)}
+          onChange={() => handleDone(index)}
           type="checkbox"
-          name="option"
-          value={text}
+          name={"option-" + index}
+          value={item.text}
         />
-        {text}
+        {item.text}
       </label>
     </div>
   );
