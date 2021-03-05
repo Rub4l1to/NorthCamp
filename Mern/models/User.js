@@ -8,4 +8,4 @@ let UserSChema = new mongoose.Schema({
     registration_date: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('User', UserSChema);
+module.exports = mongoose.model('user', UserSChema);
