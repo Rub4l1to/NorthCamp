@@ -112,7 +112,7 @@ router.post(
 );
 
 // @route   GET api/profile/
-// @desc    GGet prfile by user id
+// @desc    Get profile by user id
 // @access  Private
 router.get("/", async (req, res) => {
   try {
@@ -123,5 +123,81 @@ router.get("/", async (req, res) => {
     res.status(500).send("Server error");
   }
 });
+
+// @route   DELETE api/profile/
+// @desc    Delete profile, user & posts
+// @access  Private
+router.delete("/", auth, async (req, res) => {
+  try {
+    // Remove users posts 
+
+    // Remove profile 
+    await Profile.findOneAndRemove({ user: req.user.id });
+    // Remove users 
+    await User.findOneAndRemove({ _id: req.user.id });
+
+    res.json({ msg: 'User deleted' })
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server error");
+  }
+});
+
+// @route   PUT api/profile/experience
+// @desc    Add profile experience
+// @access  Private
+router.put("/experience", [auth, [
+  // Validations
+  check("title", "Title is required").not().isEmpty(),
+  check("company", "Company is required").not().isEmpty(),
+  check("from", "From date is required").not().isEmpty()
+]], async (req, res) => {
+  const errors = validationResult(req);
+
+  // If we've any error it will show us
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
+  const { title, company, location, from, to, current, description } = req.body;
+
+  const newExp = { title, company, location, from, to, current, description }
+
+  try {
+    const profile = await Profile.findOne({ user: req.user.id });
+
+    profile.experience.unshift(newExp);
+
+    await profile.save();
+
+    res.json(profile);
+
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server error");
+  }
+
+})
+
+// @route   DELETE api/profile/experience/:exp_id
+// @desc    Delete experience from profile
+// @access  Private
+router.delete('/experience/:exp_id', auth, (req, res) => {
+  Profile.findOne({ user: req.user.id })
+    .then(profile => {
+      // Get remove index
+      const removeIndex = profile.experience
+        .map(item => item.id)
+        .indexOf(req.params.exp_id);
+
+      // Splice out of array
+      profile.experience.splice(removeIndex, 1);
+
+      // Save
+      profile.save().then(profile => res.json(profile));
+    })
+    .catch(err => res.status(404).json(err));
+}
+);
 
 module.exports = router;
