@@ -1,0 +1,17 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 200px);
+}
+
+.grid-item {
+}
