@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Segment } from "./Segment";
 
 const Clock = () => {
@@ -26,15 +26,11 @@ const Clock = () => {
   };
 
   return (
-    <div className="clock">
-      <p className="clock__time"
-      //  onMouseOver= {handleHover}
-       >
-        <Segment {...{ value: getTime("hours") }} />:
-        <Segment {...{ value: getTime("minutes") }} />:
-        <Segment {...{ value: getTime("seconds") }} />
-      </p>
-    </div>
+    <Fragment>
+      <Segment {...{ value: getTime("hours") }} />:
+      <Segment {...{ value: getTime("minutes") }} />:
+      <Segment {...{ value: getTime("seconds") }} />
+    </Fragment>
   );
-}
+};
 export default Clock;
