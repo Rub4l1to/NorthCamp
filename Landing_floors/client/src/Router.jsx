@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 // Components
-import { Navbar } from "./components";
+import { Floors, Navbar } from "./components";
 // import { Landing, Login, Navbar, Register } from "./components/Index";
 
 const Router = () => (
@@ -12,12 +12,12 @@ const Router = () => (
         <Navbar />
       </header>
       <Switch>
-        <section className="grid-container"></section>
-        {/* <Route exact path="/" component={Landing} /> */}
-
+        <section className="grid-container floors">
+          <Route exact path="/" component={Floors} />
+        </section>
         <Redirect to="/" />
       </Switch>
-    </Fragment>
+    </Fragment> 
   </BrowserRouter>
 );
 

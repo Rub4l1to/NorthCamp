@@ -10,6 +10,11 @@
 @import "./base/utilities";
 @import "./base/_typography";
 
+// Layouts
+@import "./layouts/grid";
+
 // Components
-@import "../../components/layouts/Navbar/navbar";
-@import "../../components/Search/Search";
+@import "./components/navbar";
+@import "./components/search";
+@import "./components/floors";
+@import "./components/card";

@@ -1,6 +1,6 @@
 .navbar {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 40px;
 
   &__item {
@@ -8,12 +8,11 @@
   }
 
   &__logo {
-    grid-column: 1 /2;
-    @include flexbox(center, center);
+    grid-column: 1/2;
+    @include flexbox(flex-start, center);
   }
 
   &__image {
     width: 120px;
-    // max-width: 140px;
   }
 }

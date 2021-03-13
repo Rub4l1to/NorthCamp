@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 
-import logo from '../../../assets/img/logo.svg'
+import logo from '../../assets/img/logo.svg'
 
 // Components
-import { Search } from "../..";
+import { Search } from "../index";
 
 const Navbar = () => {
   return (
